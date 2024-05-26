@@ -1,0 +1,45 @@
+{
+    "api_name": "Sample API",
+    "endpoints": [
+      {
+        "endpoint_name": "users",
+        "method": "GET",
+        "description": "Get a list of users"
+     
+      },
+      {
+        "endpoint_name": "posts",
+        "method": "GET",
+        "description": "Get a list of posts"
+       
+        
+      },
+      {
+        "endpoint_name": "users",
+        "method": "GET",
+        "description": "Get a list of users"
+     
+      },
+      {
+        "endpoint_name": "posts",
+        "method": "GET",
+        "description": "Get a list of posts"
+       
+        
+      },
+      {
+        "endpoint_name": "users",
+        "method": "GET",
+        "description": "Get a list of users"
+     
+      },
+      {
+        "endpoint_name": "posts",
+        "method": "GET",
+        "description": "Get a list of posts"
+       
+        
+      }
+    ]
+  }
+  

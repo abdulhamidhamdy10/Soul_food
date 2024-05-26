@@ -1,0 +1,3495 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Gotu&display=swap');
+
+* {
+  /* font-family: "Ubuntu", sans-serif; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+/* #114232  
+#F7F6BB */
+body {
+  background-color: #f2f0cb;
+
+}
+
+
+:root {
+  --blue: #05003b;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.containe {
+  position: relative;
+  width: 100%;
+}
+
+/* <!-- ========================================== -->
+<!-- ========================================== -->
+<!-- =============== Navbar ===================== -->
+<!-- ========================================== -->
+<!-- ========================================== --> */
+.navigation {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: #114232;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+@media (max-width:720px) {
+  .navigation {
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    background-color: #114232;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+}
+
+.navigation.active {
+  width: 80px;
+}
+
+
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  /* margin-left: -30px; */
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: #F7F6BB;
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #F7F6BB;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: #020019;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: left;
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .iconlogo {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: left;
+  font-size: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navigation ul li a .icon i {
+  padding-left: 20px;
+}
+
+
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  margin-left: 20px;
+
+}
+
+.navigation ul li a .titlemain {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px #F7F6BB;
+  ;
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px #F7F6BB;
+  pointer-events: none;
+}
+
+
+
+
+/* <!-- ========================================== -->
+<!-- ========================================== -->
+<!-- =============== Footer ===================== -->
+<!-- ========================================== -->
+<!-- ========================================== --> */
+
+.footer {
+  background-color: #000000;
+  color: #FFF;
+  padding: 40px 0 0 0;
+  height: 500px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.footer h1 {
+  margin-bottom: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer .col-md-7 h3 {
+  font-size: 15px;
+}
+
+.footer .largescreen {
+  font-size: 15px;
+}
+
+.footer .smallscreen {
+  display: none;
+}
+
+.footer .col-md-1 hr {
+  width: 1px;
+  height: 300px;
+  background-color: #FFF;
+}
+
+.footer .col-md-4 .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer .col-md-4 .icons i {
+  font-size: 30px;
+}
+
+.footer .col-md-4 h1 {
+  font-size: 20px;
+}
+
+.footer .col-md-4 h4 {
+  font-size: 15px;
+}
+
+.footer .col-md-4 .input input {
+  padding: 5px 10px;
+}
+
+.footer .col-md-4 .input button {
+  padding: 5px 10px;
+  background-color: #F7F6BB;
+  border: 2px #114232 solid;
+}
+
+.footer #scrollToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background-color: #114232;
+  border: 2px #F7F6BB solid;
+  padding: 7px 11px;
+  color: #F7F6BB;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.footer #scrollToTopBtn:hover {
+  color: #114232;
+
+  background-color: #F7F6BB;
+  border: 2px #114232 solid;
+
+}
+
+
+@media (max-width:720px) {
+  .footer {
+    background-color: #000000;
+    color: #FFF;
+    padding: 40px 0 0 0;
+    height: 750px;
+  }
+
+  .footer .col-md-7 h3 {
+    font-size: 15px;
+  }
+
+  .footer .col-md-1 hr {
+    width: 380px;
+    height: 1px;
+    background-color: #FFF;
+  }
+
+  .footer .largescreen {
+    display: none;
+  }
+
+  .footer .smallscreen {
+    font-size: 12px;
+    display: block;
+    margin-left: 20px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .footer .col-md-1 hr {
+    width: 340px;
+    height: 1px;
+    background-color: #FFF;
+  }
+}
+
+/* @media (max-width: 480px){
+  .main {
+    position: absolute;
+    width: calc(100% - 100px);
+    left: 100px;
+    min-height: 100vh;
+    background-color: #F7F6BB;
+    transition: 0.5s;   
+  }
+} */
+
+/* ================================================ */
+/* ================================================ */
+/* ====================== Main ==================== */
+/* ================================================ */
+/* ================================================ */
+.main {
+  position: absolute;
+  width: calc(100% - 200px);
+  left: 200px;
+  min-height: 100vh;
+  background-color: #F7F6BB;
+  transition: 0.5s;
+}
+
+@media (max-width:720px) {
+
+  .main {
+    position: absolute;
+    width: calc(100% - 0px);
+    left: 0px;
+    min-height: 100vh;
+    background-color: #F7F6BB;
+    transition: 0.5s;
+  }
+}
+
+
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.main .topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+
+.main .topbar .cartlogo {
+  background-color: #114232;
+  border: 1px #114232 solid;
+  padding: 5px;
+  color: #F7F6BB;
+text-decoration: none;
+}
+.main .topbar .cartlogo:hover{
+  
+  border: 1px #114232 solid;
+  padding: 5px;
+  color: #114232;
+text-decoration: none;
+background-color: #F7F6BB;
+
+}
+
+.main .topbar .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px #114232;
+
+}
+
+.main .topbar .header .cart{
+  display: flex;
+  background-color: #114232;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px #114232 solid;
+  padding: 2px;
+ color: #F7F6BB;
+ border-radius: 10px;
+}
+.main .topbar .header .cart:hover{
+  background-color: #F7F6BB;
+  border: 1px #114232 solid;
+  color: #114232;
+}
+.main .topbar .header .cart p{
+  height: 22px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background-color: #F7F6BB;
+  color: #114232;
+}
+
+
+
+.main .topbar .toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin-left: -80px;
+  color: #f2f0cb;
+  position: fixed;
+}
+
+@media (max-width:720px) {
+
+  .main .topbar .toggle ion-icon {
+    position: fixed;
+    top: 0px;
+    /* تعديل الارتفاع من الأعلى حسب الحاجة */
+    left: 0px;
+    /* تعديل المسافة من اليسار حسب الحاجة */
+    z-index: 9999;
+    /* لضمان ظهور العنصر فوق باقي العناصر */
+    color: #f2f0cb;
+    background-color: #114232;
+    padding: 3px;
+    padding-left: 10px;
+    font-size: 50px;
+    border-bottom-right-radius: 10px;
+
+  }
+}
+
+.main .topbar .search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+  margin-left: 40px;
+}
+
+.main .topbar .search label {
+  position: relative;
+  width: 100%;
+}
+
+.main .topbar .search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--black2);
+}
+
+.main .topbar .search label ion-icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+
+@media (max-width:720px) {
+  .main .topbar .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-left: 0px;
+    color: #000000;
+  }
+}
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((Home PAGE))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+
+/* <!-- ========================================== -->
+<!-- =============== headhome ===================== -->
+<!-- ========================================== --> */
+.headhome {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.headhome .colone {
+  background-image: url("../imgs/Homepage/mainhome/271708.jpg");
+  padding: 100px 0;
+  background-size: cover;
+}
+
+.headhome .colone .text {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 100px;
+  color: white;
+
+  width: 40%;
+  text-align: center;
+  border: 6px #fff solid;
+  outline: 2px #fff solid;
+  outline-offset: 5px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+
+.headhome .colone .text h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.headhome .colone .text h2 {
+  font-size: 60px;
+}
+
+.headhome .coltwo {
+  border: 2px #000000 solid;
+  outline: 2px #000000 solid;
+  outline-offset: 5px;
+  padding: 0 20px;
+}
+
+.headhome .coltwo .address {
+  text-align: center;
+}
+
+.headhome .coltwo hr {
+  height: 3px;
+  background-color: #020019;
+}
+
+.headhome .coltwo .images img {
+  width: 150px;
+  height: 100px;
+  margin: 0px 0 40px 0;
+}
+
+.headhome .coltwo .rowone .text {
+  width: 100%;
+}
+
+.headhome .coltwo .rowone .text h2 {
+  font-size: 20px;
+}
+
+.headhome .coltwo .rowone .text h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+
+
+/* <!-- ========================================== -->
+<!-- =============== bodyhome ===================== -->
+<!-- ========================================== --> */
+
+.bodyhome {
+  background-image: url("../imgs/Homepage/bodyhome/A-Glass-of-water-on-white-background-1161576130_5760x3840-scaled-e1593446976432.jpg");
+  background-size: cover;
+  margin: 0 15px;
+}
+
+.bodyhome .text {
+
+  width: 40%;
+  margin: 100px;
+  outline: 2px #000000 solid;
+  outline-offset: -8px;
+  padding: 10px 20px;
+  background-color: #fff;
+
+}
+
+
+
+
+/* 
+<!-- ========================================== -->
+<!-- =============== setionhome ===================== -->
+<!-- ========================================== -->
+ */
+
+.sectionhome {
+  margin: 20px;
+  border: 2px black solid;
+  outline: 2px black solid;
+  outline-offset: 5px;
+}
+
+.sectionhome .col-md-12 .address {
+  width: 30%;
+  text-align: center;
+  margin-top: 60px;
+  margin: auto;
+
+}
+
+.sectionhome .col-md-12 .address h1 {
+  font-weight: 700;
+
+}
+
+.sectionhome .col-md-12 .address hr {
+  height: 1px;
+  background-color: #000000;
+}
+
+.sectionhome .col-md-4 .text {
+  width: 90%;
+}
+
+.sectionhome .col-md-8 .images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sectionhome .col-md-8 .images img {
+  width: 180px;
+  height: 300px;
+}
+
+.sectionhome .col-md-8 .caption {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sectionhome .col-md-8 .caption h3 {
+  font-size: 20px;
+  background-color: #114232;
+  color: #F7F6BB;
+  padding: 5px;
+  margin-top: -20px;
+}
+
+.sectionhome .col-md-12 .line h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 5px;
+}
+
+.sectionhome .col-md-12 .numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.sectionhome .col-md-12 .numbers h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.sectionhome .col-md-12 .numbers h1 span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+
+
+/* <!-- ========================================== -->
+<!-- =============== Endhome ===================== -->
+<!-- ========================================== --> */
+
+.endhome {
+  border: 1px black solid;
+  margin: 0 15px;
+  padding: 50px 0;
+  height: 400px;
+}
+
+.endhome .col-md-4 img {
+  width: 300px;
+  height: 300px;
+}
+
+.endhome .col-md-8 h3 {
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+
+.endhome .col-md-8 h1 {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.endhome .col-md-8 .info {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.endhome .col-md-8 .info button {
+  padding: 10px 20px;
+  background-color: #114232;
+  color: #F7F6BB;
+  border: 0px #114232 solid;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.endhome .col-md-8 .info button:hover {
+  background-color: #F7F6BB;
+  color: #114232;
+  border: 2px #114232 solid;
+  transform: scale(1.1);
+}
+
+.endhome .col-md-8 .info .social {
+  display: flex;
+  justify-content: space-around;
+}
+
+.endhome .col-md-8 .info .social h4 {
+  margin: 0 15px;
+  color: #114232;
+  font-size: 30px;
+}
+
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+
+ 
+
+}
+
+
+
+
+
+
+
+
+/* ====================== Responsive Design ========================== */
+/* ====================== Responsive Design ========================== */
+@media (max-width: 720px) {
+  .chartsBx {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .navigation {
+    left: -300px;
+    /* width: 100px; */
+    width: 20%;
+  }
+
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 80px;
+  }
+
+  .colone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .navigation ul li a .title {
+    display: none;
+  }
+
+
+
+  .headhome .colone {
+    padding: 50px 0;
+
+  }
+
+  .headhome .col-md-8 {
+    margin-bottom: 50px;
+  }
+
+  .headhome .colone .text {
+    margin-left: 70px;
+    width: 70%;
+  }
+
+  .headhome .coltwo .images img {
+    width: 150px;
+    height: 100px;
+    margin-left: 35px;
+  }
+
+  .headhome .coltwo .rowone .text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+
+
+  .bodyhome {
+
+    margin: 0 15px;
+  }
+
+  .bodyhome .text {
+
+    width: 90%;
+    margin: 20px 0;
+
+  }
+
+
+
+
+
+  .sectionhome .col-md-12 .address {
+    width: 80%;
+
+  }
+
+  .sectionhome .col-md-4 .text {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: -30px;
+  }
+
+
+  .sectionhome .col-md-8 .images {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionhome .col-md-8 .images img {
+    width: 70px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  .sectionhome .col-md-8 .caption {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionhome .col-md-8 .caption h3 {
+    font-size: 15px;
+    margin-top: -50px;
+  }
+
+  .sectionhome .col-md-12 .line h1 {
+    font-size: 15px;
+
+  }
+
+  .sectionhome .col-md-12 .numbers {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .endhome {
+
+    height: 870px;
+  }
+
+  .endhome .col-md-4 img {
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  .endhome .col-md-8 h3 {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .endhome .col-md-8 .info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .endhome .col-md-8 .info button {
+    margin-bottom: 20px;
+  }
+
+  .endhome .col-md-8 .info button:hover {
+    background-color: #F7F6BB;
+    color: #114232;
+    border: 2px #114232 solid;
+    transform: scale(1.1);
+  }
+
+
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+@media (max-width: 400px) {
+
+  .chartsBx {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .navigation {
+    left: -300px;
+    /* width: 100px; */
+    width: 20%;
+  }
+
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 80px;
+  }
+
+  .colone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .navigation ul li a .title {
+    display: none;
+  }
+
+
+
+  .headhome .colone {
+    padding: 50px 0;
+
+  }
+
+  .headhome .col-md-8 {
+    margin-bottom: 50px;
+  }
+
+  .headhome .colone .text {
+    margin-left: 70px;
+    width: 70%;
+  }
+
+  .headhome .coltwo .images img {
+    width: 150px;
+    height: 100px;
+    margin-left: 35px;
+  }
+
+  .headhome .coltwo .rowone .text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+
+
+  .bodyhome {
+
+    margin: 0 15px;
+  }
+
+  .bodyhome .text {
+
+    width: 90%;
+    margin: 20px 0;
+
+  }
+
+
+
+
+
+  .sectionhome .col-md-12 .address {
+    width: 80%;
+
+  }
+
+  .sectionhome .col-md-4 .text {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: -30px;
+  }
+
+
+  .sectionhome .col-md-8 .images {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionhome .col-md-8 .images img {
+    width: 70px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  .sectionhome .col-md-8 .caption {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionhome .col-md-8 .caption h3 {
+    font-size: 15px;
+    margin-top: -50px;
+  }
+
+  .sectionhome .col-md-12 .line h1 {
+    font-size: 10px;
+
+  }
+
+  .sectionhome .col-md-12 .numbers {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .endhome {
+
+    height: 870px;
+  }
+
+  .endhome .col-md-4 img {
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  .endhome .col-md-8 h3 {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .endhome .col-md-8 .info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .endhome .col-md-8 .info button {
+    margin-bottom: 20px;
+  }
+
+  .endhome .col-md-8 .info button:hover {
+    background-color: #F7F6BB;
+    color: #114232;
+    border: 2px #114232 solid;
+    transform: scale(1.1);
+  }
+}
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+  .chartsBx {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .navigation {
+    left: -300px;
+    /* width: 100px; */
+    width: 20%;
+  }
+
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 80px;
+  }
+
+  .colone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .navigation ul li a .title {
+    display: none;
+  }
+
+
+
+  .headhome .colone {
+    padding: 50px 0;
+
+  }
+
+  .headhome .col-md-8 {
+    margin-bottom: 50px;
+  }
+
+  .headhome .colone .text {
+    margin-left: 70px;
+    width: 70%;
+  }
+
+  .headhome .coltwo .images img {
+    width: 150px;
+    height: 100px;
+    margin-left: 35px;
+  }
+
+  .headhome .coltwo .rowone .text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+
+
+  .bodyhome {
+
+    margin: 0 15px;
+  }
+
+  .bodyhome .text {
+
+    width: 90%;
+    margin: 20px 0;
+
+  }
+
+
+
+
+
+  .sectionhome .col-md-12 .address {
+    width: 80%;
+
+  }
+
+  .sectionhome .col-md-4 .text {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: -30px;
+  }
+
+
+  .sectionhome .col-md-8 .images {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionhome .col-md-8 .images img {
+    width: 70px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  .sectionhome .col-md-8 .caption {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionhome .col-md-8 .caption h3 {
+    font-size: 15px;
+    margin-top: -50px;
+  }
+
+  .sectionhome .col-md-12 .line h1 {
+    font-size: 10px;
+
+  }
+
+  .sectionhome .col-md-12 .numbers {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .endhome {
+
+    height: 870px;
+  }
+
+  .endhome .col-md-4 img {
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+
+  .endhome .col-md-8 h3 {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .endhome .col-md-8 .info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .endhome .col-md-8 .info button {
+    margin-bottom: 20px;
+  }
+
+  .endhome .col-md-8 .info button:hover {
+    background-color: #F7F6BB;
+    color: #114232;
+    border: 2px #114232 solid;
+    transform: scale(1.1);
+  }
+
+}
+
+
+
+
+
+@media (max-width: 400px) {
+
+
+
+}
+
+
+
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((MEAT PAGE))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+
+
+/* <!-- ========================================== -->
+<!-- =============== headmeat ===================== -->
+<!-- ========================================== --> */
+.headmeat {
+  background-color: #11423265;
+  margin: 0 15px;
+}
+
+.headmeat .col-md-5 {
+  text-align: center;
+  margin-top: 140px;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.headmeat .col-md-5 h3 {
+  font-family: "Whisper", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #f9fe00;
+}
+
+.headmeat .col-md-7 img {
+  width: 810px;
+  height: 550px;
+
+}
+
+
+
+/* <!-- ========================================== -->
+<!-- =============== bodymeat ===================== -->
+<!-- ========================================== --> */
+.bodymeat {
+  text-align: center;
+  font-size: 30px;
+}
+
+.bodymeat h4 {
+  font-family: "Whisper", cursive;
+  color: #bf8300
+}
+
+.bodymeat .col-md-3 {
+  text-align: left;
+}
+
+.bodymeat .col-md-3 h3 {
+  font-size: 20px;
+}
+
+.bodymeat .col-md-3 p {
+  font-size: 15px;
+}
+
+.bodymeat .col-md-3 img {
+  width: 265px;
+  height: 200px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== sectionmeat ===================== -->
+<!-- ========================================== --> */
+
+.sectionmeat {
+  background-image: url("../imgs/Meatpage/sectionmeat/The-Best-Meat-Grinders-For-Home-Use.jpg");
+  background-size: cover;
+  height: 300px;
+  color: #114232;
+  margin: 0 15px;
+}
+
+.sectionmeat .col-md-12 {
+  margin-top: 70px;
+  background-color: #1142328c;
+  padding: 10px 15px;
+  color: #F7F6BB;
+}
+
+.sectionmeat .col-md-12 h6 {
+  width: 40%;
+  line-height: 25px;
+}
+
+.sectionmeat .col-md-12 input {
+  padding: 5px 10px;
+}
+
+.sectionmeat .col-md-12 button {
+  padding: 5px 10px;
+  background-color: #114232;
+  color: #F7F6BB;
+  transition: all 0.4s ease;
+  border: 0px;
+}
+
+.sectionmeat .col-md-12 button:hover {
+  transform: scale(1.2);
+  background-color: #F7F6BB;
+  color: #114232;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== mainmeat ===================== -->
+<!-- ========================================== --> */
+
+.mainmeat .col-md-4 {
+  margin-top: 30px;
+}
+
+.mainmeat .col-md-4 h4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mainmeat .col-md-4 h6 {
+  font-family: "Whisper", cursive;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.mainmeat .col-md-4 h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: 20px;
+
+}
+
+.mainmeat .col-md-4 button {
+  padding: 5px 10px;
+  background-color: #114232;
+  border: 0px;
+  color: #F7F6BB;
+  margin-top: 30px;
+}
+
+.mainmeat .col-md-4 button:hover {
+  background-color: #F7F6BB;
+  box-shadow: 0 0 10px 0 #114232;
+  color: #114232;
+}
+
+.mainmeat .col-md-8 .images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainmeat .col-md-8 .images img {
+  height: 430px;
+  width: 240px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== endmeat ===================== -->
+<!-- ========================================== --> */
+
+.endmeat {
+  margin: 0 50px;
+
+}
+
+.endmeat .address {
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+
+.endmeat .address i {
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.endmeat .address i span {
+  font-family: "Whisper", cursive;
+  margin: 0 10px;
+  font-size: 20px;
+
+}
+
+.endmeat .col-md-4 img {
+  width: 200px;
+  height: 200px;
+  margin-left: 70px;
+  border-radius: 50%;
+  margin-bottom: -70px;
+
+}
+
+.endmeat .col-md-4 .text {
+  background-color: #11423280;
+  color: #F7F6BB;
+  border: 1px black solid;
+  text-align: center;
+  height: 280px;
+  width: 350px;
+  padding-top: 110px;
+  box-shadow: 0 0 7px 0 black;
+}
+
+.endmeat .col-md-4 .text:hover {
+  background-color: #F7F6BB;
+  color: #114232;
+  border: 1px #114232 solid;
+  box-shadow: 0 0 17px 0 #114232;
+}
+
+.endmeat .col-md-4 .text h1 {
+  font-weight: 400;
+
+}
+
+.endmeat .col-md-4 .text h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.endmeat .col-md-4 .text a {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #114232;
+}
+
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+
+ 
+  .headmeat {
+    margin: 0 5px;
+  }
+
+  .headmeat .col-md-5 {
+    margin-top: 50px;
+  }
+
+  .headmeat .col-md-7 img {
+    width: 440px;
+    height: 350px;
+    margin: 30px 0;
+    border-radius: 40px;
+    border: 2px #f9fe00 solid;
+  }
+
+
+
+
+  .bodymeat {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .bodymeat h4 {
+    font-family: "Whisper", cursive;
+    color: #bf8300
+  }
+
+  .bodymeat .col-md-3 {
+    text-align: center;
+  }
+
+  .bodymeat .col-md-3 img {
+    margin-top: 40px;
+  }
+
+
+
+
+
+  .sectionmeat {
+    margin-bottom: 400px;
+  }
+
+  .sectionmeat .col-md-12 {
+    margin: 70px 0;
+    background-color: #1142328c;
+    padding: 10px 15px;
+    color: #F7F6BB;
+  }
+
+  .sectionmeat .col-md-12 h6 {
+    width: 100%;
+    line-height: 25px;
+  }
+
+
+
+
+
+
+  .mainmeat .col-md-4 {
+    margin-bottom: -50px;
+  }
+
+  .mainmeat .col-md-4 button {
+    padding: 5px 10px;
+    background-color: #114232;
+    border: 0px;
+    color: #F7F6BB;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .mainmeat .col-md-4 button:hover {
+    background-color: #F7F6BB;
+    box-shadow: 0 0 10px 0 #114232;
+    color: #114232;
+  }
+
+  .mainmeat .col-md-8 .images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -600px;
+  }
+
+  .mainmeat .col-md-8 .images img {
+    height: 160px;
+    width: 100px;
+  }
+
+
+
+
+
+  .endmeat {
+    margin: 300px 60px 0;
+
+  }
+
+  .endmeat .address {
+    text-align: center;
+    margin-bottom: 50px;
+
+  }
+
+  .endmeat .address i {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .endmeat .address i span {
+    font-family: "Whisper", cursive;
+    margin: 0 10px;
+    font-size: 20px;
+
+  }
+
+  .endmeat .col-md-4 img {
+    margin-top: 80px;
+
+  }
+
+  .endmeat .col-md-4 .text {
+    background-color: #11423280;
+    color: #F7F6BB;
+    border: 1px black solid;
+    text-align: center;
+    height: 280px;
+    width: 350px;
+    padding-top: 110px;
+    box-shadow: 0 0 7px 0 black;
+  }
+
+  .endmeat .col-md-4 .text:hover {
+    background-color: #F7F6BB;
+    color: #114232;
+    border: 1px #114232 solid;
+    box-shadow: 0 0 17px 0 #114232;
+  }
+
+  .endmeat .col-md-4 .text h1 {
+    font-weight: 400;
+
+  }
+
+  .endmeat .col-md-4 .text h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .endmeat .col-md-4 .text a {
+    margin-top: 50px;
+    text-decoration: none;
+    color: #114232;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+
+
+  .headmeat {
+    margin: 0 5px;
+  }
+
+  .headmeat .col-md-5 {
+    margin-top: 50px;
+  }
+
+  .headmeat .col-md-7 img {
+    width: 390px;
+    height: 350px;
+    margin: 30px 0;
+    border-radius: 40px;
+    border: 2px #f9fe00 solid;
+  }
+
+
+
+
+  .bodymeat {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .bodymeat h4 {
+    font-family: "Whisper", cursive;
+    color: #bf8300
+  }
+
+  .bodymeat .col-md-3 {
+    text-align: center;
+  }
+
+  .bodymeat .col-md-3 img {
+    margin-top: 40px;
+  }
+
+
+
+
+
+  .sectionmeat {
+    margin-bottom: 400px;
+  }
+
+  .sectionmeat .col-md-12 {
+    margin: 70px 0;
+    background-color: #1142328c;
+    padding: 10px 15px;
+    color: #F7F6BB;
+  }
+
+  .sectionmeat .col-md-12 h6 {
+    width: 100%;
+    line-height: 25px;
+  }
+
+
+
+
+
+
+  .mainmeat .col-md-4 {
+    margin-bottom: -50px;
+  }
+
+  .mainmeat .col-md-4 button {
+    padding: 5px 10px;
+    background-color: #114232;
+    border: 0px;
+    color: #F7F6BB;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .mainmeat .col-md-4 button:hover {
+    background-color: #F7F6BB;
+    box-shadow: 0 0 10px 0 #114232;
+    color: #114232;
+  }
+
+  .mainmeat .col-md-8 .images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -600px;
+  }
+
+  .mainmeat .col-md-8 .images img {
+    height: 160px;
+    width: 100px;
+  }
+
+
+
+
+
+  .endmeat {
+    margin: 300px 25px 0;
+
+  }
+
+  .endmeat .address {
+    text-align: center;
+    margin-bottom: 50px;
+
+  }
+
+  .endmeat .address i {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .endmeat .address i span {
+    font-family: "Whisper", cursive;
+    margin: 0 10px;
+    font-size: 20px;
+
+  }
+
+  .endmeat .col-md-4 img {
+    margin-top: 80px;
+
+  }
+
+  .endmeat .col-md-4 .text {
+    background-color: #11423280;
+    color: #F7F6BB;
+    border: 1px black solid;
+    text-align: center;
+    height: 280px;
+    width: 350px;
+    padding-top: 110px;
+    box-shadow: 0 0 7px 0 black;
+  }
+
+  .endmeat .col-md-4 .text:hover {
+    background-color: #F7F6BB;
+    color: #114232;
+    border: 1px #114232 solid;
+    box-shadow: 0 0 17px 0 #114232;
+  }
+
+  .endmeat .col-md-4 .text h1 {
+    font-weight: 400;
+
+  }
+
+  .endmeat .col-md-4 .text h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .endmeat .col-md-4 .text a {
+    margin-top: 50px;
+    text-decoration: none;
+    color: #114232;
+  }
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+
+@media (max-width: 400px) {
+
+
+
+
+  .headmeat .col-md-7 img {
+    width: 330px;
+
+  }
+
+
+
+
+  .bodymeat {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .bodymeat h4 {
+    font-family: "Whisper", cursive;
+    color: #bf8300
+  }
+
+  .bodymeat .col-md-3 {
+    text-align: center;
+  }
+
+  .bodymeat .col-md-3 img {
+    margin-top: 40px;
+  }
+
+
+
+
+
+  .endmeat {
+    margin: 300px 0px;
+
+  }
+
+  .endmeat .address {
+    text-align: center;
+    margin-bottom: 50px;
+
+  }
+
+  .endmeat .address i {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .endmeat .address i span {
+    font-family: "Whisper", cursive;
+    margin: 0 10px;
+    font-size: 20px;
+
+  }
+
+  .endmeat .col-md-4 img {
+    margin-top: 80px;
+
+  }
+
+  .endmeat .col-md-4 .text {
+    background-color: #11423280;
+    color: #F7F6BB;
+    border: 1px black solid;
+    text-align: center;
+    height: 280px;
+    width: 350px;
+    padding-top: 110px;
+    box-shadow: 0 0 7px 0 black;
+  }
+
+  .endmeat .col-md-4 .text:hover {
+    background-color: #F7F6BB;
+    color: #114232;
+    border: 1px #114232 solid;
+    box-shadow: 0 0 17px 0 #114232;
+  }
+
+  .endmeat .col-md-4 .text h1 {
+    font-weight: 400;
+
+  }
+
+  .endmeat .col-md-4 .text h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .endmeat .col-md-4 .text a {
+    margin-top: 50px;
+    text-decoration: none;
+    color: #114232;
+  }
+}
+
+
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((SEAFOOD PAGE))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+
+/* <!-- ========================================== -->
+<!-- =============== head seafood ===================== -->
+<!-- ========================================== --> */
+
+.headseafood .image img {
+  width: 800px;
+  height: 570px;
+}
+
+.headseafood .content .images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headseafood .content {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+}
+
+.headseafood .content .address h2 {
+  text-align: center;
+  margin-bottom: 30PX;
+}
+
+.headseafood .content .images img {
+  width: 140px;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.headseafood .content .images h4 {
+  font-size: 13px;
+  margin-left: 30px;
+  line-height: 30px;
+}
+
+.headseafood .text {
+  width: 80%;
+  margin-top: 5px;
+}
+
+.headseafood .text h2 {
+  font-weight: 700;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== body seafood ===================== -->
+<!-- ========================================== --> */
+
+.bodyseafood {
+  margin-left: 40px;
+}
+
+.bodyseafood .address h1 {
+  font-family: "Gotu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.bodyseafood .img img {
+  width: 300px;
+  height: 230px;
+}
+
+.bodyseafood .img .stars {
+  display: flex;
+  text-align: left;
+}
+
+.bodyseafood .img .stars h5 {
+  font-size: 15px;
+  color: #114232;
+}
+
+.bodyseafood .img .stars span {
+  margin: 0 0 10px 20px;
+  font-size: 16px;
+
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== section seafood ===================== -->
+<!-- ========================================== --> */
+
+.sectionseafood {
+  background-image: url("../imgs/Seafoodpage/mainseafood/chef-cook-cleaning-bighead-carp-fish-working-environment-restaurant-kitchen-diet-concept-234614234.webp");
+  background-size: cover;
+  background-position: center center;
+}
+
+.sectionseafood .content {
+  background-color: #fff;
+  margin: 150px 0;
+  padding: 40px 20px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== main seafood ===================== -->
+<!-- ========================================== --> */
+
+.mainseafood .content {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.mainseafood .content .text h2 {
+  margin-top: 1px;
+}
+
+.mainseafood .content img {
+  width: 300px;
+  height: 200px;
+  margin-right: 40px;
+  /* margin-bottom: 50px; */
+}
+
+.mainseafood hr {
+  border-top: 1px black solid;
+  margin: 65px 0;
+}
+
+/* <!-- ========================================== -->
+<!-- =============== end seafood ===================== -->
+<!-- ========================================== --> */
+
+.endseafood .container {
+  border: 15px #114232 solid;
+  /* margin: 0 10px; */
+}
+
+.endseafood a {
+  color: #bf8300;
+}
+
+.endseafood .left .text h1 {
+  color: #114232;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.endseafood .left .text h6 {
+  width: 95%;
+  line-height: 30px;
+}
+
+.endseafood .left .image {
+  display: flex;
+  margin-top: 70px;
+}
+
+.endseafood .left .image img {
+  width: 200px;
+  height: 120px;
+}
+
+.endseafood .left .icons {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.endseafood .right {
+  padding: 0 20px;
+}
+
+.endseafood .right .text h1 {
+  color: #114232;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.endseafood .content .top {
+
+  margin-top: 50px;
+
+}
+
+.endseafood .content .top .images {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.endseafood .content .top .images img {
+  width: 70px;
+  height: 70px;
+}
+
+.endseafood .content .down {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+
+.endseafood .content .down .images img {
+  width: 70px;
+  height: 70px;
+}
+
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+
+  .headseafood .image img {
+    width: 455px;
+    height: 370px;
+  }
+
+  .headseafood .content {
+    margin-top: 300px;
+  }
+
+  .headseafood .text {
+    width: 100%;
+    margin-top: -800px;
+    margin-bottom: 60px;
+  }
+
+
+
+  .bodyseafood {
+    margin-left: 40px;
+    text-align: center;
+  }
+
+  .bodyseafood .img {
+    margin-top: 60px;
+  }
+
+  .bodyseafood .img .stars {
+    display: flex;
+    margin-left: 100px;
+  }
+
+
+
+  .sectionseafood .content {
+    background-color: #ffffffc9;
+  }
+
+
+
+  .mainseafood .content img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .mainseafood .content .text h2 {
+    margin-top: 1px;
+    font-size: 25px;
+  }
+
+
+  .endseafood .container {
+    border: 10px #114232 solid;
+    width: 97%;
+    padding-bottom: 100px;
+  }
+
+  .endseafood .left .image img {
+    width: 200px;
+    height: 120px;
+    margin-top: 40px;
+  }
+
+  .endseafood .left .text h1 {
+    margin-top: 20px;
+    font-size: 32px;
+  }
+
+  .endseafood .left .text h6 {
+    width: 85%;
+  }
+
+  .endseafood .left .icons {
+    margin-top: 550px;
+    margin-bottom: -550px;
+  }
+
+  .endseafood .content .top .images img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .endseafood .content .down .images img {
+    margin-top: 10px;
+  }
+
+}
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+  .headseafood .image img {
+    width: 400px;
+    height: 370px;
+  }
+
+
+
+  .bodyseafood {
+    margin-left: 0px;
+  }
+
+
+
+  .mainseafood .content .text h2 {
+    margin-top: 1px;
+    font-size: 25px;
+  }
+
+
+
+  .endseafood .left .image img {
+    width: 160px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .endseafood .left .text h1 {
+    font-size: 28px;
+  }
+
+  .endseafood .left .text h6 {
+    width: 95%;
+  }
+
+  .endseafood .left .icons {
+    margin-top: 550px;
+    margin-bottom: -550px;
+  }
+
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+
+@media (max-width: 400px) {
+
+  .headseafood .image img {
+    width: 340px;
+    height: 350px;
+    margin-bottom: 100px;
+  }
+
+  .headseafood .content {
+    margin-top: 250px;
+  }
+
+  .headseafood .text {
+    width: 100%;
+    margin-top: -900px;
+  }
+
+
+
+  .bodyseafood {
+    margin-left: 0px;
+  }
+
+
+  .mainseafood .content .text h2 {
+    margin-top: 1px;
+    font-size: 15px;
+  }
+
+
+
+  .endseafood .left .image img {
+    width: 130px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .endseafood .left .text h1 {
+    font-size: 28px;
+  }
+
+  .endseafood .left .text h6 {
+    width: 95%;
+  }
+
+  .endseafood .left .icons {
+    margin-top: 620px;
+    margin-bottom: -620px;
+
+  }
+
+}
+
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((TAKEAWAY PAGE))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+
+
+/* <!-- ========================================== -->
+<!-- =============== head takeaway ===================== -->
+<!-- ========================================== --> */
+.headtakeaway h1 {
+  background-image: url("../imgs/TakeAway/headtakeaway/four-sandwiches-plate-dark-background_158023-920.jpg");
+  background-size: cover;
+  padding: 200px 0 300px;
+  text-align: center;
+  color: #FFF;
+  font-family: 700;
+  border-radius: 20px;
+  font-size: 60px;
+}
+
+/* <!-- ========================================== -->
+<!-- =============== body takeaway ===================== -->
+<!-- ========================================== --> */
+.bodytakeaway .text {
+  margin-top: 100px;
+  width: 85%;
+}
+
+.bodytakeaway .text h2 {
+  font-size: 50px;
+}
+
+.bodytakeaway .image img {
+  width: 450px;
+  height: 500px;
+  margin-left: 100px;
+}
+
+/* <!-- ========================================== -->
+<!-- =============== sectiontakeaway ===================== -->
+<!-- ========================================== --> */
+.sectiontakeaway .image img {
+  width: 600px;
+  height: 500px;
+}
+
+.sectiontakeaway .text {
+  margin-top: 100px;
+}
+
+.sectiontakeaway .text h2 {
+  font-size: 50px;
+}
+
+
+
+/* <!-- ========================================== -->
+<!-- =============== main takeaway ===================== -->
+<!-- ========================================== --> */
+.maintakeaway .text {
+  margin-top: 100px;
+}
+
+.maintakeaway .text h2 {
+  font-size: 50px;
+}
+
+.maintakeaway .text p {
+  width: 85%;
+}
+
+.maintakeaway .image {
+  background-image: url("../imgs/TakeAway/maintakeaway/621856ef7f7b73d2cc27d18f.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 150px;
+  margin-left: 40px;
+}
+
+.maintakeaway .image .note {
+  width: 40%;
+  background-color: #fff;
+  margin-top: 150px;
+  margin-left: -40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 black;
+  padding: 5px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== content takeaway ===================== -->
+<!-- ========================================== --> */
+.contenttakeaway .image img {
+  width: 500px;
+  height: 500px;
+}
+
+.contenttakeaway .text {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.contenttakeaway .text h2 {
+  font-size: 46px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== end takeaway ===================== -->
+<!-- ========================================== --> */
+.endtakeaway {
+  margin-left: 100px;
+}
+
+.endtakeaway .col-md-6 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+}
+
+.endtakeaway .text {
+  margin-left: 20px;
+}
+
+.endtakeaway .text p {
+  margin-top: 20px;
+  width: 75%;
+}
+
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+  .bodytakeaway {
+    margin-bottom: 140px;
+  }
+
+  .bodytakeaway .text {
+    margin-top: 500px;
+    width: 95%;
+  }
+
+  .bodytakeaway .text h2 {
+    font-size: 50px;
+  }
+
+  .bodytakeaway .image img {
+    width: 450px;
+    height: 450px;
+    margin-left: 0px;
+    margin-top: -1100px;
+  }
+
+
+
+  .sectiontakeaway .image img {
+    width: 455px;
+  }
+
+  .sectiontakeaway .text {
+    margin-top: 30px;
+  }
+
+
+
+  .maintakeaway .text {
+    margin-top: 600px;
+  }
+
+  .maintakeaway .image {
+    background-image: url("../imgs/TakeAway/maintakeaway/621856ef7f7b73d2cc27d18f.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 150px;
+    margin-left: 40px;
+    margin-top: -750px;
+  }
+
+
+
+  .contenttakeaway .image img {
+    width: 455px;
+    height: 500px;
+  }
+
+  .contenttakeaway .text {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+
+
+  .endtakeaway {
+    margin-left: 50px;
+  }
+
+  .endtakeaway .col-md-6 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 90px;
+  }
+
+  .endtakeaway .text {
+    margin-left: 20px;
+  }
+
+  .endtakeaway .text p {
+    margin-top: 20px;
+    width: 75%;
+  }
+
+
+}
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+  .bodytakeaway {
+    margin-bottom: 140px;
+  }
+
+  .bodytakeaway .image img {
+    width: 400px;
+    height: 400px;
+    margin-left: 0px;
+    margin-top: -1200px;
+  }
+
+
+
+  .sectiontakeaway .image img {
+    width: 400px;
+  }
+
+
+
+  .contenttakeaway .image img {
+    width: 400px;
+    height: 450px;
+  }
+
+
+
+
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+
+@media (max-width: 400px) {
+  .headtakeaway h1 {
+    background-image: url("../imgs/TakeAway/headtakeaway/four-sandwiches-plate-dark-background_158023-920.jpg");
+    background-size: cover;
+    padding: 200px 0 200px;
+    text-align: center;
+    color: #FFF;
+    font-family: 700;
+    border-radius: 20px;
+    font-size: 50px;
+  }
+
+
+
+  .bodytakeaway .text h2 {
+    font-size: 40px;
+  }
+
+  .bodytakeaway .image img {
+    width: 350px;
+    height: 350px;
+    margin-left: 0px;
+    margin-top: -1000px;
+  }
+
+
+
+  .sectiontakeaway .image img {
+    width: 340px;
+    height: 400px;
+  }
+
+  .sectiontakeaway .text {
+    margin-top: 20px;
+  }
+
+
+
+  .maintakeaway .text {
+    margin-top: 600px;
+  }
+
+  .maintakeaway .image {
+    margin-top: -787px;
+  }
+
+
+
+  .contenttakeaway .image img {
+    width: 345px;
+    height: 400px;
+  }
+}
+
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((DRINKS PAGE))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+
+
+/* <!-- ========================================== -->
+<!-- =============== head drinks ===================== -->
+<!-- ========================================== --> */
+
+.headdrinks .col-md-2 h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+.headdrinks .col-md-2 h5 {
+  font-weight: 400;
+}
+
+.headdrinks .col-md-2 hr {
+  width: 15%;
+  border-top: 1px black solid;
+  margin-bottom: 20px;
+}
+
+/* <!-- ========================================== --> */
+
+.headdrinks .col-md-6 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.headdrinks .col-md-6 hr {
+  width: 1px;
+  border-top: 800px #000000 solid;
+  margin-top: -1px;
+}
+
+.headdrinks .col-md-6 img {
+  width: 470px;
+  height: 670px;
+}
+
+.headdrinks .col-md-6 h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+
+}
+
+/* <!-- ========================================== --> */
+
+.headdrinks .col-md-4 .col-md-12 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.headdrinks .col-md-4 .col-md-12 img {
+  width: 150px;
+  height: 200px;
+  /* margin-left: 15px; */
+}
+
+.headdrinks .col-md-4 .col-md-12 h4 {
+  font-weight: 400;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.headdrinks .col-md-4 .col-md-12 h6 {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== body drinks ===================== -->
+<!-- ========================================== --> */
+
+.bodydrinks .address h1 {
+  text-align: center;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 35px;
+}
+
+.bodydrinks img {
+  width: 270px;
+  height: 170px;
+}
+
+.bodydrinks p {
+  margin-bottom: 0px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== section drinks ===================== -->
+<!-- ========================================== --> */
+
+.sectiondrinks h1 {
+  margin-top: 70px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.sectiondrinks .image {
+  text-align: center;
+}
+
+.sectiondrinks .image img {
+  width: 500px;
+  height: 700px;
+}
+
+.sectiondrinks .image h6 {
+  margin-top: 10px;
+}
+
+.sectiondrinks .image h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* <!-- ========================================== --> */
+
+.sectiondrinks .image img {
+  margin-bottom: 0px;
+}
+
+.sectiondrinks .content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sectiondrinks .content {
+  margin-top: 50px;
+}
+
+.sectiondrinks .content img {
+  width: 300px;
+  height: 250px;
+}
+
+.sectiondrinks .content .text {
+  width: 22%;
+  margin-left: -60px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== main drinks ===================== -->
+<!-- ========================================== --> */
+
+.maindrinks {
+  background-color: #114232;
+}
+
+.maindrinks .col-md-12 {
+  padding: 110px 0;
+  text-align: center;
+  color: #f2f0cb;
+}
+
+.maindrinks .col-md-12 h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.maindrinks .col-md-12 button {
+  background-color: #f2f0cb;
+  padding: 5px 14px;
+  border: 0px;
+  margin-top: 40px;
+}
+
+
+/* <!-- ========================================== -->
+<!-- =============== end drinks ===================== -->
+<!-- ========================================== --> */
+
+.enddrinks hr {
+  border-top: 1px black solid;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.enddrinks .col-md-3 .text {
+  margin-top: 50px;
+}
+
+.enddrinks .cafe img {
+  width: 200px;
+  height: 170px;
+}
+
+.enddrinks .juice img {
+  width: 140px;
+  height: 170px;
+}
+
+.enddrinks .tea img {
+  width: 200px;
+  height: 170px;
+}
+
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+
+
+  .headdrinks .col-md-2 h1 {
+    text-align: center;
+  }
+  .headdrinks .col-md-6 hr {
+    width: 1px;
+    border-top: 700px #000000 solid;
+    margin-top: 41px;
+  }
+  .headdrinks .col-md-6 img {
+    width: 400px;
+    height: 500px;
+    margin-top: 40px;
+  }
+  .headdrinks .col-md-4 .col-md-12 img {
+    margin-top: 60px;
+  }
+  .headdrinks .col-md-4 .col-md-12 h6 {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+
+
+  .bodydrinks .address h1 {
+    margin-top: 100px;
+  }
+  .bodydrinks img {
+    width: 455px;
+    height: 270px;
+  }
+  .bodydrinks p {
+    margin-bottom: 80px;
+  }
+
+  .sectiondrinks h1 {
+    margin-top: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: 300;
+  }
+
+  .sectiondrinks .image {
+    text-align: center;
+  }
+
+  .sectiondrinks .image img {
+    width: 455px;
+    height: 500px;
+  }
+
+  .sectiondrinks .image h6 {
+    margin-top: 10px;
+  }
+
+  .sectiondrinks .image h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  /* <!-- ========================================== --> */
+
+ 
+  .sectiondrinks .content img {
+    width: 220px;
+    height: 150px;
+  }
+
+  .sectiondrinks .content .text {
+    width: 50%;
+    margin-left: 30px;
+  }
+
+
+
+
+  .enddrinks .col-md-3 .text {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .enddrinks .cafe img {
+    width: 200px;
+    height: 170px;
+    margin: 30px 0 0 125px;
+  }
+
+  .enddrinks .juice img {
+    width: 140px;
+    height: 170px;
+    margin: 70px 0 0 175px;
+
+  }
+
+  .enddrinks .tea img {
+    width: 200px;
+    height: 170px;
+    margin: 70px 0 20px 145px;
+
+  }
+
+}
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+
+  .headdrinks .col-md-6 hr {
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  .headdrinks .col-md-6 img {
+    width: 360px;
+    height: 460px;
+  }
+
+
+
+  .bodydrinks img {
+    width: 398px;
+  }
+
+
+
+  .sectiondrinks .image img {
+    width: 398px;
+    height: 590px;
+  }
+  .sectiondrinks .image h6 {
+    margin-top: 10px;
+  }
+  .sectiondrinks .image h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+
+
+  .enddrinks .cafe img {
+    margin: 30px 0 0 99px;
+  }
+  .enddrinks .juice img {
+    margin: 70px 0 0 150px;
+  }
+  .enddrinks .tea img {
+    margin: 70px 0 20px 120px;
+  }
+
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+
+@media (max-width: 400px) {
+
+  .headdrinks .col-md-6 img {
+    width: 320px;
+  }
+
+
+
+  .bodydrinks img {
+    width: 345px;
+  }
+
+
+
+  .sectiondrinks .image img {
+    width: 345px;
+    height: 535px;
+  }
+  .sectiondrinks .content img {
+    width: 130px;
+    height: 150px;
+  }
+  .sectiondrinks .content .text {
+    width: 100%;
+    margin-left: 15px;
+  }
+
+
+
+  .enddrinks .cafe img {
+    margin: 30px 0 0 70px;
+  }
+  .enddrinks .juice img {
+    margin: 70px 0 0 120px;
+  }
+  .enddrinks .tea img {
+    margin: 70px 0 20px 88px;
+
+  }
+
+
+}
+
+
+
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((Menu))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+.address_menu{
+  font-weight: 700;
+  margin-left: 30px;
+  background-color: #114232;
+  color: #F7F6BB;
+  padding: 10px 0;
+  padding-left: 10px;
+  width: 56%;
+  font-family: "Bebas Neue", sans-serif;
+ 
+  font-style: normal;
+  letter-spacing: 6px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.menu{
+  margin: 0 30px;
+}
+
+/* <!-- ========================================== -->
+<!-- =============== Show Product ===================== -->
+<!-- ========================================== --> */
+.menu .product{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.menu .product #root{
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  overflow-y: auto; 
+  max-height: 650px; 
+  margin-bottom: 30px;
+}
+.menu .product #root .box{
+  border: 1px solid #114232;
+  border-radius: 5px;
+  padding: 55px 20px 20px;
+  box-shadow: 0px 0px 12px -6px black;
+}
+.menu .product #root .box .img-box{
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .product #root .box h2{
+  color: red;
+  font-size: 17px;
+}
+.menu .product #root .box .img-box .images{
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 60px;
+}
+.menu .product #root .box .bottom{
+  margin-top: 20px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+.menu .product #root .box .bottom button{
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+.menu .product #root .box .bottom button:hover{
+  background-color: #114232;
+  color: #F7F6BB;
+}
+
+
+
+/* <!-- ========================================== -->
+<!-- =============== Cart pro ===================== -->
+<!-- ========================================== --> */
+.menu .product .sidebar{
+  width: 40%;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-left: 30px;
+  padding: 15px;
+  text-align: center;
+ margin-top: -80px;
+}
+.menu .product .sidebar .head{
+  background-color: #114232;
+  border-radius: 3px;
+  height: 40px;
+  padding: 30px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .product .sidebar .head p{
+  font-size: 20px;
+  font-weight: 700;
+  
+}
+.menu .product .sidebar .head button{
+  background-color: rgb(37, 37, 37);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 10px 0;
+  border: 2px red solid;
+  color: #fff;
+  font-weight: bolder;
+  
+}
+.menu .product .sidebar .head button:hover{
+  background-color: red;
+
+}
+
+
+
+.cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 10px 10px;
+}
+.cart-item .inc_dec{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cart-item .inc_dec  button{
+  padding: 3px 6px;
+  font-size: 20px;
+  background-color: #114232;
+  border: 1px #114232 solid;
+  color: #F7F6BB;
+}
+.cart-item .inc_dec  button:hover{
+  background-color: #F7F6BB;
+  border: 1px #114232 solid;
+  color: #114232;
+
+}
+
+.cart-item .row-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid goldenrod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.cart-item .row-img .rowimg{
+  max-width: 43px;
+  max-height: 43px;
+  border-radius: 50%;
+  
+}
+.cart-item i{
+  color: black;
+  font-size: 25px;
+}
+.cart-item i:hover{
+  color: red;
+}
+
+
+.menu .product .sidebar .foot{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 0;
+  padding: 10px 0px 0;
+  border-top: 1px solid #333;
+}
+.menu .product .sidebar .foot h2{
+  font-size: 20px;
+  color: red;
+}
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+  .address_menu{
+    margin-left: 10px;
+    width: 95%;
+    
+  }
+  .menu{
+    margin: 0 10px;
+  }
+  .menu .product {
+    flex-direction: column;
+  }
+
+  .menu .product #root {
+    width: 100%;
+    margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 80px;
+    border-bottom: 1px #000000 solid;
+  }
+
+  .menu .product .sidebar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+
+  
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+
+@media (max-width: 400px) {
+
+
+
+}
+
+
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+/* ====================================================((FORM))=============================================================== */
+/* ================================================================================================================================ */
+/* ================================================================================================================================ */
+
+.form .col-md-8 h1{
+  font-size:80px;
+  font-weight: bolder;
+  margin-top: 140px;
+  font-family: "Lobster", sans-serif;
+  font-family: "Kaushan Script", cursive;
+
+  font-style: normal
+}
+.form .col-md-8 hr{
+  border-top: 2px black solid;
+  width: 10%;
+}
+.form .col-md-8 h6{
+  font-family: "Kaushan Script", cursive;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+.form .col-md-4{
+  background-color: #fff;
+  padding: 30px 10px 10px;
+  text-align: center;
+  box-shadow: 0 0 27px -10px black;
+border-radius: 10px;
+}
+.form .col-md-4 input{
+  background-color: #0038c72d;
+}
+
+.form .col-md-4 h1{
+  font-weight: bolder;
+}
+.form .col-md-4 h5{
+  width: 55%;
+  text-align: center;
+  margin: auto;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.form .col-md-4 h6{
+ text-align: right;
+ margin-bottom: 20px;
+}
+.form .col-md-4 .icon {
+  display: flex;
+justify-content: center;
+  gap: 5px;
+}
+.form .col-md-4 .icon i{
+  border: 1px #000000 solid;
+  padding: 13px 20px;
+  margin: 0 3px;
+  border-radius:7px;
+}
+
+
+/* Responsive */
+/* Responsive */
+/* Responsive */
+@media (max-width: 720px) {
+  .form .col-md-8 h1{
+    font-weight: bolder;
+    margin-top: 40px ;
+  }
+  .form .col-md-8 h6{
+    margin-bottom: 70px;
+  }
+  
+
+  .form .col-md-4{
+  margin: 0 30px;
+  padding: 70px 30px 20px;
+  }
+
+
+}
+
+
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+/* Responsive Iphone 14 pro max*/
+@media (max-width: 480px) {
+
+  .form .col-md-8 h1{
+    font-weight: bolder;
+    margin-top: 40px ;
+  font-size:70px;
+
+  }
+  .form .col-md-8 h6{
+    margin-bottom: 70px;
+  }
+  
+
+  .form .col-md-4{
+  margin: 0 20px;
+  padding: 70px 20px 20px;
+  }
+}
+
+
+
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+/* Responsive Iphone 11 pro */
+
+@media (max-width: 400px) {
+
+
+  .form .col-md-8 h1{
+    font-weight: bolder;
+    margin-top: 40px ;
+  font-size:60px;
+
+  }
+  .form .col-md-8 h6{
+    margin-bottom: 70px;
+  }
+  
+
+  .form .col-md-4{
+  margin: 0 20px;
+  padding: 70px 20px 20px;
+  }
+
+}
